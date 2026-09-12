@@ -22,7 +22,9 @@
       --cyan: #12d8ff;
       --blue: #087fda;
     }
+
     * { box-sizing: border-box; }
+
     html, body {
       margin: 0;
       min-height: 100%;
@@ -32,12 +34,15 @@
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
     }
+
     body {
       display: flex;
       justify-content: center;
       padding: 18px 12px 34px;
     }
+
     main { width: min(100%, 520px); }
+
     .card {
       width: 100%;
       height: auto;
@@ -48,19 +53,25 @@
         0 24px 70px rgba(0,0,0,.52),
         0 0 42px rgba(0, 157, 255, .08);
     }
+
+    /* Match Angela layout: Save Contact full-width, then clean 2x2 button grid */
     .actions {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
       margin-top: 14px;
+      align-items: stretch;
     }
+
     .button {
+      width: 100%;
       min-height: 52px;
       padding: 13px 14px;
       border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
       text-decoration: none;
       color: var(--text);
       font-weight: 700;
@@ -68,19 +79,22 @@
       border: 1px solid var(--line);
       background: var(--panel);
       transition: transform .15s ease, border-color .15s ease, background .15s ease;
+      white-space: nowrap;
     }
+
     .button:hover {
       transform: translateY(-1px);
       border-color: rgba(31, 207, 255, .8);
       background: rgba(5, 31, 58, .98);
     }
+
     .button.primary {
       grid-column: 1 / -1;
       border: 0;
       background: linear-gradient(135deg, var(--cyan), var(--blue));
       color: #00111d;
     }
-    .button.full { grid-column: 1 / -1; }
+
     .footer {
       text-align: center;
       color: var(--muted);
@@ -88,9 +102,10 @@
       line-height: 1.55;
       margin-top: 14px;
     }
+
     @media (max-width: 390px) {
       .actions { grid-template-columns: 1fr; }
-      .button.primary, .button.full { grid-column: auto; }
+      .button.primary { grid-column: auto; }
     }
   </style>
 </head>
@@ -102,7 +117,7 @@
       <a class="button" href="tel:+639955521200">Call</a>
       <a class="button" href="mailto:shine3501@gmail.com">Email</a>
       <a class="button" href="https://t.me/DAFA5488" target="_blank" rel="noopener">Telegram</a>
-      <a class="button full" href="https://kaiwaytech.com" target="_blank" rel="noopener">Visit KaiwayTech</a>
+      <a class="button" href="https://kaiwaytech.com" target="_blank" rel="noopener">Visit KaiwayTech</a>
     </section>
     <div class="footer">
       Kobe Chiu · Chief Executive Officer · KaiwayTech
