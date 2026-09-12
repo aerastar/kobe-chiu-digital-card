@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#031126">
+  <title>Kobe Chiu | KaiwayTech</title>
+  <meta name="description" content="Digital business card for Kobe Chiu, Chief Executive Officer at KaiwayTech.">
+
+  <meta property="og:title" content="Kobe Chiu | KaiwayTech">
+  <meta property="og:description" content="Chief Executive Officer · KaiwayTech">
+  <meta property="og:image" content="kobe-chiu-card.png">
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #020b18;
+      --panel: rgba(4, 20, 39, .92);
+      --line: rgba(31, 207, 255, .42);
+      --text: #f6fbff;
+      --muted: #a9bed3;
+      --cyan: #12d8ff;
+      --blue: #087fda;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background:
+        radial-gradient(circle at 50% -10%, rgba(0, 138, 255, .16), transparent 42%),
+        linear-gradient(180deg, #041426 0%, var(--bg) 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      padding: 18px 12px 34px;
+    }
+    main { width: min(100%, 520px); }
+    .card {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 22px;
+      border: 1px solid rgba(48, 192, 255, .18);
+      box-shadow:
+        0 24px 70px rgba(0,0,0,.52),
+        0 0 42px rgba(0, 157, 255, .08);
+    }
+    .actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .button {
+      min-height: 52px;
+      padding: 13px 14px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+      letter-spacing: .01em;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
+    }
+    .button:hover {
+      transform: translateY(-1px);
+      border-color: rgba(31, 207, 255, .8);
+      background: rgba(5, 31, 58, .98);
+    }
+    .button.primary {
+      grid-column: 1 / -1;
+      border: 0;
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      color: #00111d;
+    }
+    .button.full { grid-column: 1 / -1; }
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+      margin-top: 14px;
+    }
+    @media (max-width: 390px) {
+      .actions { grid-template-columns: 1fr; }
+      .button.primary, .button.full { grid-column: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="card" src="kobe-chiu-card.png" alt="Kobe Chiu — Chief Executive Officer, KaiwayTech">
+    <section class="actions" aria-label="Contact Kobe Chiu">
+      <a class="button primary" href="Kobe_Chiu_Contact.vcf" download>Save Contact</a>
+      <a class="button" href="tel:+639955521200">Call</a>
+      <a class="button" href="mailto:shine3501@gmail.com">Email</a>
+      <a class="button" href="https://t.me/DAFA5488" target="_blank" rel="noopener">Telegram</a>
+      <a class="button full" href="https://kaiwaytech.com" target="_blank" rel="noopener">Visit KaiwayTech</a>
+    </section>
+    <div class="footer">
+      Kobe Chiu · Chief Executive Officer · KaiwayTech
+    </div>
+  </main>
+</body>
+</html>
